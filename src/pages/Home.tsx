@@ -5,25 +5,17 @@ import { responsive } from "../components/Base/ResponsiveBase/Carousel";
 import EventCard from "../components/EventCard";
 import { getDisplayPrice } from "../components/utils/getDisplayPrice";
 import EventSection from "../components/EventSection";
-import HeroBanner from "../components/HeroBanner";
 import CategoryFilter from "../components/CategoryFilter";
-import StatsSection from "../components/StatsSection";
 import TrendingSection from "../components/TrendingSection";
 
 const Home = () => {
   return (
     <div className="w-full mx-auto bg-[#212121]">
-      {/* HERO BANNER */}
-      <HeroBanner />
-
       {/* CATEGORY FILTER */}
       <CategoryFilter />
 
       {/* TRENDING SECTION */}
       <TrendingSection events={events} />
-
-      {/* STATS SECTION */}
-      <StatsSection />
 
       <div className="py-8">
         <div className="mx-30">
