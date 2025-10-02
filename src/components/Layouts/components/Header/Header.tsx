@@ -2,7 +2,11 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
-const Header = () => {
+interface HeaderProps {
+  onLoginClick?: () => void;
+}
+
+const Header = ({ onLoginClick }: HeaderProps) => {
   return (
     <header className="w-full bg-[#2dc275] shadow-sm">
       <div className="mx-30">
@@ -35,9 +39,12 @@ const Header = () => {
             <Link to="/about" className="hover:text-amber-400 text-white">
               Về chúng tôi
             </Link>
-            <Link to="/products" className="hover:text-amber-400 text-white">
+            <button
+              onClick={onLoginClick}
+              className="hover:text-amber-400 text-white font-semibold"
+            >
               Đăng nhập | Đăng ký
-            </Link>{" "}
+            </button>
           </nav>
         </div>
       </div>

@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import { events } from "../constants/mocks/mockEventData";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -50,10 +49,10 @@ const Home = () => {
         </div>
         {/* UPCOMING SECTION */}
         <EventSection title="Sắp diễn ra" data={events} />
-
+  
         {/* FOR YOU SECTION */}
         <EventSection title="Dành cho bạn" data={events.slice(2, 8)} />
-
+  
         {/* ANOTHER SECTION */}
         <EventSection title="Sự kiện nổi bật" data={events.slice(8, 10)} />
       </div>
