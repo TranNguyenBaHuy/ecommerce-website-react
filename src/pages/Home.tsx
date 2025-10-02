@@ -5,15 +5,11 @@ import { responsive } from "../components/Base/ResponsiveBase/Carousel";
 import EventCard from "../components/EventCard";
 import { getDisplayPrice } from "../components/utils/getDisplayPrice";
 import EventSection from "../components/EventSection";
-import CategoryFilter from "../components/CategoryFilter";
 import TrendingSection from "../components/TrendingSection";
 
 const Home = () => {
   return (
     <div className="w-full mx-auto bg-[#212121]">
-      {/* CATEGORY FILTER */}
-      <CategoryFilter />
-
       {/* TRENDING SECTION */}
       <TrendingSection events={events} />
 

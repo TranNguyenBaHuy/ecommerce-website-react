@@ -16,36 +16,10 @@ import bctLogo from "../../../../assets/bct-registered.svg";
 const Footer = () => {
   return (
     <>
-      {/* Newsletter Section */}
-      <div className="w-full bg-gradient-to-r from-[#2dc275] to-[#25a563] py-12">
-        <div className="mx-30">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="text-white">
-              <h3 className="text-2xl font-bold mb-2">
-                Đăng ký nhận tin mới nhất
-              </h3>
-              <p className="text-white/90">
-                Nhận thông tin về các sự kiện hot và ưu đãi đặc biệt
-              </p>
-            </div>
-            <div className="flex gap-2 w-full md:w-auto">
-              <input
-                type="email"
-                placeholder="Nhập email của bạn"
-                className="px-4 py-3 rounded-lg w-full md:w-80 focus:outline-none focus:ring-2 focus:ring-amber-400"
-              />
-              <button className="bg-amber-400 hover:bg-amber-500 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300 whitespace-nowrap">
-                Đăng ký
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Main Footer */}
-      <div className="w-full mx-auto bg-[#1d1d1d]">
+      {/* Main Footer Links */}
+      <div className="w-full mx-auto bg-[#2a2a2a]">
         <div className="mx-30 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Company Info */}
             <div>
               <Link to="/" className="inline-block mb-4">
@@ -192,9 +166,13 @@ const Footer = () => {
               </ul>
             </div>
           </div>
+        </div>
+      </div>
 
-          {/* Bottom Bar */}
-          <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      {/* Company Info Section */}
+      <div className="w-full mx-auto bg-[#1d1d1d]">
+        <div className="mx-30 py-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
             <div className="text-sm text-gray-400">
               <p className="mb-1">Công ty TNHH TicketBox Clone</p>
               <p className="mb-1">
@@ -213,7 +191,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="text-center text-gray-500 text-sm mt-8">
+          <div className="text-center text-gray-500 text-sm border-t border-gray-700 pt-6">
             © 2025 TicketBox. All rights reserved.
           </div>
         </div>
