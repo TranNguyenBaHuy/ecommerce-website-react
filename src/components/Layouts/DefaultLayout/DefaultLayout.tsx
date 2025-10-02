@@ -4,6 +4,8 @@ import Footer from "../components/Footer/Footer";
 import LoginForm from "../../Auth/LoginForm";
 import ForgotPasswordForm from "../../Auth/ForgotPasswordForm";
 import RegisterForm from "../../Auth/RegisterForm";
+import ScrollToTop from "../../ScrollToTop";
+import PromoBanner from "../../PromoBanner";
 
 type AuthView = "login" | "forgot" | "register" | null;
 
@@ -16,8 +18,10 @@ const DefaultLayout = ({ children }: PropsWithChildren) => {
     <>
       <div>
         <Header onLoginClick={() => setAuthView("login")} />
+        <PromoBanner />
         <div className="flex flex-1 flex-col">{children}</div>
         <Footer />
+        <ScrollToTop />
       </div>
       {authView === "login" && (
         <LoginForm

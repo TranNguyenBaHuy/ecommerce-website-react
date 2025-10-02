@@ -10,11 +10,18 @@ interface EventSectionProps {
 
 const EventSection = ({ title, data }: EventSectionProps) => {
   return (
-    <div className="mt-6 ">
-      <div className="flex flex-row justify-between items-center">
-        <div className="text-2xl text-white font-bold mb-6">{title}</div>
-        <Link to="/all-events" className="text-white hover:text-[#2dc275]">
+    <div className="mt-12">
+      <div className="flex flex-row justify-between items-center mb-6">
+        <div className="flex items-center gap-4">
+          <h2 className="text-3xl text-white font-bold">{title}</h2>
+          <div className="h-1 w-20 bg-gradient-to-r from-[#2dc275] to-transparent rounded-full"></div>
+        </div>
+        <Link 
+          to="/all-events" 
+          className="text-white hover:text-[#2dc275] font-semibold flex items-center gap-2 group transition-colors duration-300"
+        >
           Xem thêm
+          <span className="group-hover:translate-x-2 transition-transform duration-300">→</span>
         </Link>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
